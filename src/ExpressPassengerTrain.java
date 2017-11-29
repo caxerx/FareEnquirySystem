@@ -8,4 +8,9 @@ public class ExpressPassengerTrain extends PassengerTrain {
     public double calculateFare(Station from, Station to, int quantity) {
         return super.calculateDistanceFare(from, to) + (getLine().getExpressTrainSurcharge() * quantity);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Express Train Surcharge Required!";
+    }
 }

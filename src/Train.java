@@ -21,10 +21,10 @@ abstract class Train {
     }
 
     public boolean isValidRoute(Station from, Station to) {
-        if (start.getDistance() > end.getDistance() && from.getDistance() > end.getDistance() && from.getDistance() <= start.getDistance() && end.getDistance() >= to.getDistance()) {
+        if (start.getDistance() > end.getDistance() && from.getDistance() > to.getDistance() && from.getDistance() <= start.getDistance() && to.getDistance() >= end.getDistance()) {
             return true;
         }
-        if (start.getDistance() < end.getDistance() && from.getDistance() < end.getDistance() && from.getDistance() >= start.getDistance() && end.getDistance() <= to.getDistance()) {
+        if (start.getDistance() < end.getDistance() && from.getDistance() < to.getDistance() && from.getDistance() >= start.getDistance() && to.getDistance() <= end.getDistance()) {
             return true;
         }
         return false;
@@ -32,13 +32,7 @@ abstract class Train {
 
     @Override
     public String toString() {
-        return "Train{" +
-                "code='" + code + '\'' +
-                ", startTime='" + startTime + '\'' +
-                ", line=" + line +
-                ", start=" + start +
-                ", end=" + end +
-                '}';
+        return getCode() + " " + getStartTime() + " " + getStart().getName() + " -> " + getEnd().getName();
     }
 
     public String getCode() {

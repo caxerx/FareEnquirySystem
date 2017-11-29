@@ -1,17 +1,13 @@
-import java.util.Arrays;
-
 public class Line {
     private String name;
     private Station[] stops;
-    private final Train[] train;
     private final double passengerFarePerKm;
     private final double cargoFarePerKm;
     private final int expressTrainSurcharge;
 
-    public Line(String name, Station[] stops, Train[] train, double passengerFarePerKm, double cargoFarePerKm, int expressTrainSurcharge) {
+    public Line(String name, Station[] stops, double passengerFarePerKm, double cargoFarePerKm, int expressTrainSurcharge) {
         this.name = name;
         this.stops = stops;
-        this.train = train;
         this.passengerFarePerKm = passengerFarePerKm;
         this.cargoFarePerKm = cargoFarePerKm;
         this.expressTrainSurcharge = expressTrainSurcharge;
@@ -21,7 +17,7 @@ public class Line {
         return name;
     }
 
-    public int calcurateDistance(Station departure, Station arrival) {
+    public int calculateDistance(Station departure, Station arrival) {
         return departure.getDistance() > arrival.getDistance() ? departure.getDistance() - arrival.getDistance() : arrival.getDistance() - departure.getDistance();
     }
 
@@ -36,10 +32,6 @@ public class Line {
 
     public Station[] getStops() {
         return stops;
-    }
-
-    public Train[] getTrain() {
-        return train;
     }
 
     public double getPassengerFarePerKm() {

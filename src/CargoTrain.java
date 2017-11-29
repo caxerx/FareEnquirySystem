@@ -8,6 +8,12 @@ public class CargoTrain extends Train {
 
     @Override
     double calculateDistanceFare(Station from, Station to) {
-        return getLine().getCargoFarePerKm() * getLine().calcurateDistance(from, to);
+        return getLine().getCargoFarePerKm() * getLine().calculateDistance(from, to);
+    }
+
+    @Override
+    public String toString() {
+        //C001 08:00 ShenZhen -> ZhengZhou Max. Cargo Weight per Order : 100 KG
+        return super.toString() + " Max. Cargo Weight per Order : " + maxCargoWeight;
     }
 }

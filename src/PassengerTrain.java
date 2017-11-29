@@ -8,10 +8,15 @@ public class PassengerTrain extends Train {
 
     @Override
     double calculateDistanceFare(Station from, Station to) {
-        return getLine().getPassengerFarePerKm() * getLine().calcurateDistance(from, to);
+        return getLine().getPassengerFarePerKm() * getLine().calculateDistance(from, to);
     }
 
     public int getMaxTicketNumber() {
         return maxTicketNumber;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Max. Number of Passenger Ticket per Order : " + maxTicketNumber;
     }
 }
