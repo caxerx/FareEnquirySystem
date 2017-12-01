@@ -18,9 +18,9 @@ public class FareEnquirySystem {
         double cargoFarePerKm = 0;
         int expressTrainSurcharge = 0;
 
-        String fileName = "fare_.txt";
+        String fileName = "fare.txt";
 
-        // read the fare rates from the text file "fare_.txt" and handle possible exceptions to be completed by you!
+        // read the fare rates from the text file "fare.txt" and handle possible exceptions to be completed by you!
 
         //Line information
         Line line =
@@ -55,7 +55,6 @@ public class FareEnquirySystem {
 			Show the total fare
 			- to be completed by you!
 		*/
-
         loadFile();
     }
 
